@@ -1,20 +1,22 @@
 <script>
-  import svelteLogo from "./assets/svelte.svg";
-  import viteLogo from "/vite.svg";
-  import Counter from "./lib/Counter.svelte";
   import { Slider } from "bits-ui";
   let sliderValue = $state(50);
   import cn from "clsx";
+  import MainModal from "./lib/components/MainModal/MainModal.svelte";
 </script>
 
 <main
   class="w-screen bg-neutral-500 p-12 h-screen flex items-center justify-center"
 >
   <div
-    class="w-full h-full max-w-[1280px] max-h-[720px] bg-neutral-900 border border-neutral-400 shadow-lg"
+    class="w-full h-full max-w-[1280px] max-h-[720px] bg-neutral-900 borderf border-neutral-400 shadow-lg"
   >
     <div class="h-full flex w-full items-end flex-col">
-      <div class="w-full h-full"></div>
+      <div
+        class="w-full p-5 bg-purple-700f borderf border-yellow-500f flex items-center justify-center h-full"
+      >
+        <MainModal />
+      </div>
       <div class="w-full bg-neutral-800 border-t border-neutral-700">
         <div class="w-full p-2">
           <Slider.Root

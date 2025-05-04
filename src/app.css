@@ -29,6 +29,19 @@ body {
   min-height: 100vh;
 }
 
+.lucide {
+  stroke-width: 1.5px;
+}
+
+.radius-default {
+  border-radius: 0;
+}
+
+.icon-size-default {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -38,4 +51,17 @@ body {
 
 @theme {
   --color-accent-1: #8d5b4c;
+  --color-drawer-container: #303030;
+  --color-item-container: #303030;
+  --color-item-container-hover: #404040;
+}
+
+@layer components {
+  .drawer-button {
+    @apply w-full h-10 cursor-pointer hover:bg-neutral-700 flex items-center justify-center;
+  }
+}
+
+.drawer-button-active {
+  color: var(--color-accent-1);
 }
